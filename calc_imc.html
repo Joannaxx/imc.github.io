@@ -8,7 +8,7 @@
         <h1 align="center">Calculadora de IMC</h1>
         <td>
             <center>
-                <img src="img.jpg">
+                <img src="img/img.jpg">
             </center>
             
         </td>
@@ -39,51 +39,26 @@
             Corporal. Para isso, é necessário eliminar o acúmulo de gordura através da prática de atividades físicas e de alterações no cardápio diário,
             reduzindo a ingestão de gorduras e aumentando o consumo de fibras e outros nutrientes. Por outro lado, quem está abaixo do peso precisa aumentar o seu IMC.
             Para alcançar esse objetivo, recomenda-se a ingestão de alimentos ricos em vitaminas e minerais. Porém, também deve-se evitar o consumo de frituras, 
-            alimentos processados e gorduras trans.</p>
-
-            <center >
-                <button style="color:crimson" onclick="calculo_IMC();">Para calcular seu IMC, clique aqui</button>
-            </center>
-            
-            <script>
-                function calculo_IMC(){
-                    var nome, peso, altura, calc, tipo;
-                    nome = window.prompt("Digite seu nome");
-                    peso = window.prompt("Digite seu peso");
-                    peso = parseFloat(peso);
-                    altura = window.prompt("Digite sua altura (em centimetros)");
-                    altura = parseFloat(altura);
-                    calc = peso/(altura**2);
-                    if (calc <16,9) {
-                        tipo="muito abaixo do peso";
-                    } 
-
-                    if(calc <=18,4){
-                        tipo="abaixo do peso"
-                    }
-
-                    if(calc <=24,9){
-                        tipo="peso ideal"
-                    }
-
-                    if(calc <=29,9){
-                        tipo="acima do peso"
-                    }
-                    if(calc <=34,9){
-                        tipo="obesidade grau I"
-                    } 
-
-                    if(calc <=40){
-                        tipo="obesidade grau II"
-                    }
-
-                    if(calc >40){
-                        tipo="obesidade grau III- mórbida"
-                    }
-
-                    document.write(" ",nome," seu IMC é ", calc, " e você está ", tipo);
-
-                }
-            </script>
+            alimentos processados e gorduras trans. Calcule seu IMC na calculadora abaixo:</p>
+      
+            <main>
+                <div  class = "container">
+                <div  class = "input">
+                    <label> Nome: </label>
+                    <input  type = "text" id = 'nome'>
+                </div>
+                <div  class = "input">
+                    <label> Altura: </label>
+                    <input type = "number" id = 'altura'>
+                </div>
+                <div class = "input">
+                    <label> Peso: </label>
+                    <input type = "number" id = 'peso'>
+                </div>
+                <button  id = 'calculo' > Calcular </button>
+                <div style="color: darkcyan;" class = "resultado" id = 'resultado'> </div>
+                </div>
+            </main>  
+            <script src="script.js"></script> 
     </body>
 </html>
